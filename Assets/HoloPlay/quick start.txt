@@ -1,0 +1,26 @@
+HoloPlay SDK Quick Start guide:
+
+- Drag the "HoloPlay Capture" prefab into your scene!
+- For interaction, add a "HoloPlay -> Realsense Manager" as well //TODO
+
+The inspector for the HoloPlay Capture is where most of the elements can be customized. 
+Play around with settings to achieve desired results.
+
+For guides, tutorials, forums and FAQ please visit us at lookingglassfactory.com!
+We'd love to hear from you.
+
+
+
+/////////IF YOU HAVE UPGRATED FROM A VERSION < 1.O AND/OR ARE USING ONE OF THE FIRST HOLOPLAYERS!!!
+
+- rename your calibration folder on the HoloPlayer from  HoloPlaySDK_calibration  to LKG_calibration
+
+Then, inside that folder:
+
+- rename the calibration file HoloPlayConfig.json to visual.json
+
+If you see a file named touch_distortionMap.json, do the following:
+- rename touch.json to touch_projectionMap.json
+- rename touch_distortionMap.json to touch.json
+
+if you have any issues, post on http://forum.lookingglassfactory.com/

@@ -1,0 +1,1 @@
+just disabled the x86_64 folder stuff in editor/standalone/mac because it was conflicting, was throwing errors for me.
