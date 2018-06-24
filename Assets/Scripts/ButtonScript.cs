@@ -12,7 +12,7 @@ public class ButtonScript : MonoBehaviour {
     {
         if (animEnd)
         {
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
     }
 
@@ -25,7 +25,9 @@ public class ButtonScript : MonoBehaviour {
             Debug.Log("Playing anim");
             //buttonAnim.Play("");
         }
-        
+
+        SceneManager.LoadScene(1);
+
         // Play sound
         // Play TV animation
         // Camera movment? and bool change
