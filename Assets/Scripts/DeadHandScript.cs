@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(BoxCollider))]
@@ -8,6 +9,8 @@ public class DeadHandScript : MonoBehaviour {
 
     public GameObject newBackgroundObj;
     public GameObject nextTrigger;
+
+    public float timeToChange = 10f;
     //public GameObject deactivateObj;
 
 
@@ -54,6 +57,7 @@ public class DeadHandScript : MonoBehaviour {
             case Trigger.Trigger5:
                 Debug.Log("Trigger 5 is a go!!");
                 StartCoroutine(WaitToChange());
+                StartCoroutine(WaitToEnd());
                 //SetNextTrigger();
                 // play something transition scene??? or wait some time and change scene
                 break;
@@ -115,10 +119,16 @@ public class DeadHandScript : MonoBehaviour {
 
     IEnumerator WaitToChange()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(timeToChange);
         DisableBackground();
         SetNextTrigger();
         Debug.Log("running");
+    }
+
+    IEnumerator WaitToEnd()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(2);
     }
 
 }
