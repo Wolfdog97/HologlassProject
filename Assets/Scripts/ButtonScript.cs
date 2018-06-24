@@ -8,6 +8,8 @@ public class ButtonScript : MonoBehaviour {
     Animator buttonAnim;
     public bool animEnd;
 
+    public GameObject newScreen;
+
     private void Update()
     {
         if (animEnd)
@@ -27,6 +29,8 @@ public class ButtonScript : MonoBehaviour {
         }
 
         SceneManager.LoadScene(1);
+        newScreen.SetActive(true);
+
 
         // Play sound
         // Play TV animation
