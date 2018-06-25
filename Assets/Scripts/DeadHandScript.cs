@@ -128,7 +128,7 @@ public class DeadHandScript : MonoBehaviour {
     IEnumerator WaitToEnd()
     {
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 
 }
